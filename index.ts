@@ -9,16 +9,19 @@ var n: number = 9;
 var isOpen: boolean = true; // or false
 
 // 配列型
-var array: string[] = ['name', 'id', 'email'];
+var keywords: string[] = ['name', 'email', 'body'];
 
 // タプル型
-var data: [number, string, number] = [0, 'apple', 1];
+var payment: [number, string, number] = [1, 'apple', 3000];
+var _payment: (string|number)[] = [1, 'apple', 3000];
 
 // オブジェクト型
 var options: { [key: string]: string } = {
   name: 'Yohei Isokawa',
   test: 'this is test'
 };
+// array or object. (typeof演算子でobject判定できるデータ)
+var post: object = [{ id: 12, content: 'lorem ipsum' }];
 
 // enum型
 enum KeyCode {
@@ -54,12 +57,15 @@ something = 100;
 something = true;
 
 
-// 共用型
+// 共用型(Union型)
 var sample: string | number | boolean;
 sample = 'Yohei';
 sample = 100;
 sample = true;
 
+// null, undefined
+var el: Element | null = document.querySelector('.hoge');
+var foo: undefined = undefined;
 
 // 型推論
 var unknown = 'string';
