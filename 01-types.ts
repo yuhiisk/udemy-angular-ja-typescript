@@ -64,8 +64,9 @@ sample = 100;
 sample = true;
 
 // null, undefined
-var el: Element | null = document.querySelector('.hoge');
+var el: Element | null = document.querySelector('#app');
 var foo: undefined = undefined;
+// console.log(el);
 
 // 型推論
 var unknown = 'string';
