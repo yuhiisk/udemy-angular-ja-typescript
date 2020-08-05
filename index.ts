@@ -1,29 +1,50 @@
-// Import stylesheets
-import './style.css';
-
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
-
-const name = 'hoge';
-
-interface Human {
-  name: string;
-  legs: number;
-  say: () => void;
+let hoge: string = 'hoge';
+let foo: string = 'foo';
+let count: number = 10;
+let isFoo: boolean = foo === 'foo';
+let payment = {
+  amount: 3000,
+  currency: 'JPY',
+  name: 'charge',
+  date: '2020-02-29',
+  taxRate: 0.1,
+  total: 0
 };
 
-class People implements Human {
+// Function
+function log(message: string): void {
+  console.log(message);
+}
+log('Hello, TypeScript!!');
 
-  legs: number;
+const getTotal = () => {
+  const { amount, taxRate } = payment;
+  const total = amount * taxRate;
 
-  constructor(public name: string) {
-    this.legs = 2;
-  }
+  return { total, ...payment };
+};
 
-  say() {
-    console.log('Hello, ' + this.name + '!');
+// Generic
+class Store<T> {
+  data: T | null = null;
+  posts: Post[] = [];
+  getData(): T|null {
+    return this.data;
   }
 }
 
-new People('Bob').say();
+
+let stringData = new Store<string>();
+
+
+// Interface
+interface Post {
+  id: number;
+  content: string;
+  isDraft: boolean;
+  attachments: object;
+  created: string;
+  updated: string;
+}
+
+
