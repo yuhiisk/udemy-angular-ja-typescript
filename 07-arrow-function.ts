@@ -8,7 +8,7 @@ let greet = name => `Hello, ${name}!!`;
 let hello = () => 'Hello, World!!';
 
 let getValue = () => {
-  document.getElementById('app').getElementsByTagName('div').firstChild.getAttribute('value').toFixed(2);
+  return document.getElementById('app').getElementsByTagName('div').firstChild.getAttribute('value').toFixed(2);
 };
 
 var _this = this;
