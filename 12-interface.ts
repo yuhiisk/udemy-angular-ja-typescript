@@ -1,4 +1,4 @@
-// インターフェイス
+// インターフェイス (Interface)
 interface Animal {
   name: string;
   legs: number;

@@ -1,4 +1,4 @@
-// クラス
+// クラス (Class)
 class Animal {
 
   private _age: number = 10;

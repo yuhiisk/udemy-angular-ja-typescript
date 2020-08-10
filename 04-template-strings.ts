@@ -1,4 +1,4 @@
-// テンプレート文字列
+// テンプレート文字列 (Template Literals)
 let template1 = `This is Template strings.`;
 let name = 'Yohei Isokawa';
 let template2 = `

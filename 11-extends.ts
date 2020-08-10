@@ -1,4 +1,4 @@
-// クラス
+// クラス (Class)
 class Animal {
 
   age: number = 10;

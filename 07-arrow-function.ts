@@ -1,4 +1,4 @@
-// アロー関数
+// アロー関数 (Arrow Function)
 // () => {}
 let add = (x1: number, x2: number): number => x1 + x2;
 // = return x1 + x2

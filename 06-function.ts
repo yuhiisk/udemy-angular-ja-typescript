@@ -1,4 +1,4 @@
-// 関数
+// 関数 (Function)
 function greet(name: string = 'Yohei'): void {
   console.log(`Hello World! ${name}!!`);
 }

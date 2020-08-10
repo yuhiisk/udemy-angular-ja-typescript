@@ -1,4 +1,4 @@
-// スプレッド演算子
+// スプレッド演算子 (Spread Operator)
 let categories = ['post', 'news', 'info'];
 // ...categories
 
