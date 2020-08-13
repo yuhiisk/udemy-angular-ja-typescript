@@ -1,4 +1,4 @@
-// let
+// let変数
 // let foo = 'foo';
 let date = new Date();
 
