@@ -1,16 +1,18 @@
-// スプレッド演算子 (Spread Operator)
+// スプレッド演算子
+
+// 配列
+// =========================
 let categories = ['post', 'news', 'info'];
 // ...categories
 
 // 複製
-let copyCat = [...categories];
-// console.log(copyCat);
+let copyCat = [...categories]; // 'post', 'news', 'info'
+// console.log(copyCat, copyCat === categories);
 
-// 後ろで展開
+// 連結
 let pushCat = ['other', ...categories];
 // console.log(pushCat);
 
-// 前で展開
 let unshiftCat = [...categories, 'other'];
 // console.log(unshiftCat);
 
@@ -19,30 +21,28 @@ let insertCat = ['other', ...categories, 'Q&A'];
 // console.log(insertCat);
 
 // 2つの配列をマージ
-let mergeCat = [...categories, ...pushCat];
+let mergeCat = [...categories, ...copyCat];
 // console.log(mergeCat);
 
-function list() {
-  console.log(arguments.length);
-}
-// list(...categories); // list('post', 'news', 'info');
-// new Date(...categories);
 
+// オブジェクト
+// =========================
 let post = { id: 1, content: 'dummy', created: '2020-04-01' };
 
 // 複製
 let copyObj = { ...post };
 // console.log(copyObj);
 
-// オブジェクトの連結
-let pushObj = { ...post, created: '2020-04-05', updated: '2020-04-10' };
+// 連結
+let pushObj = { ...post, updated: '2020-04-05' };
 // console.log(pushObj);
+
+// オブジェクトのマージ
 let mergeObj = { ...post, ...pushObj };
 // console.log(mergeObj);
 
-// オブジェクトを配列に展開することはできない
+// 配列にオブジェクトを展開することはできない
 // let test = [...post];
-
-// 配列をオブジェクトに展開することは可能
-let test = {...categories};
+// 逆に配列はオブジェクトに展開できる
+let test = { ...categories };
 // console.log(test);
