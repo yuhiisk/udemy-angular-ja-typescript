@@ -1,22 +1,23 @@
-// アロー関数 (Arrow Function)
-// () => {}
-let add = (x1: number, x2: number): number => x1 + x2;
-// = return x1 + x2
+// アロー関数
+// () => { }
+
+let add = (x1: number, x2: number): number => {
+  return x1 + x2;
+};
 console.log(add(1, 3));
 
-let greet = name => `Hello, ${name}!!`;
-let hello = () => 'Hello, World!!';
+let hello = name => `Hello, ${name}!`;
+console.log(hello('Yohei'));
 
-let getValue = () => {
+let getValue = (): number => { 
   return document.getElementById('app').getElementsByTagName('div').firstChild.getAttribute('value').toFixed(2);
-};
+}
 
-var _this = this;
 document.getElementById('button1').addEventListener('click', function() {
-  console.log(_this); // <button></button>
+  console.log(this); // <button></button>
 });
 
-// this = Window
+// this => Window
 document.getElementById('button1').addEventListener('click', () => {
   console.log(this); // Window
 });
