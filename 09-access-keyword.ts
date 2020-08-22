@@ -1,16 +1,16 @@
-// クラス (Class)
+// クラス
 class Animal {
 
   age: number = 10;
 
-  constructor(public isCry: boolean, public legs: number) {  }
+  constructor(public isCry: boolean) { }
 
   cry(): void {
     if (this.isCry) {
-      alert(`legs: ${this.legs}`);
+      alert(`age: ${this.age}`);
     }
   }
 }
 
-const dog = new Animal(true, 4);
+let dog = new Animal(true);
 dog.cry();
