@@ -1,35 +1,37 @@
-// クラス (Class)
+// クラス
 class Animal {
 
-  private _age: number = 10;
+  age: number = 10;
+  private _legs = 1;
 
-  constructor(public isCry: boolean, public legs: number) {  }
+  constructor(public isCry: boolean) { }
 
   cry(): void {
     if (this.isCry) {
-      alert(`legs: ${this.legs}`);
+      alert(`age: ${this.age}`);
     }
   }
 
-  // アクセサメソッド（getter, setter）
-  get age() {
-    return this._age;
-  }
-
-  set age(value: number) {
-    if (value < 0) {
-      throw new Error('年齢は0以上で無ければいけません');
+  // アクセサメソッド(getter, setter)
+  get legs() {
+    if (this._legs > 2) {
+      return this._legs;
     }
-    this._age = value;
   }
 
-  // formGroup.get('email')
+  set legs(value: number) {
+    if (value > 1) {
+      this._legs = value;
+    }
+  }
+
   // get email() {
   //   return this.formGroup.get('email');
   // }
+  // dog.email
 }
 
-const dog = new Animal(true, 4);
+let dog = new Animal(true);
 // dog.cry();
-dog.age = 14;
-console.log(dog.age); // 14
+dog.legs = 4;
+console.log(dog.legs);
