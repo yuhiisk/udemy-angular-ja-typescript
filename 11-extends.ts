@@ -1,28 +1,34 @@
-// クラス (Class)
+// クラスの継承
 class Animal {
 
   age: number = 10;
 
-  constructor(public isCry: boolean, public legs: number) {  }
+  constructor(public isCry: boolean) {
+    this.age = 2;
+  }
 
   cry(): void {
     if (this.isCry) {
-      alert(`legs: ${this.legs}`);
+      alert(`age: ${this.age}`);
     }
   }
 }
 
 class Dog extends Animal {
 
-  constructor(public isCry: boolean, public legs: number) {
-    super(isCry, legs);
+  constructor(public isCry: boolean) {
+    super(isCry);
+    this.age = 10;
   }
 
   cry(): void {
+    // if (this.isCry) {
+    //   alert('Bow, wow'!);
+    // }
     console.log('dog is cry!');
     super.cry();
   }
 }
 
-const dog = new Dog(true, 4);
+let dog = new Dog(true);
 dog.cry();
